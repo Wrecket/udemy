@@ -1,45 +1,13 @@
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var button = document.querySelector("button");
+const array = [1, 2, 10, 16];
 
-function setGradient() {
-    body.style.background = 
-    "linear-gradient(to right, "
-    + color1.value 
-    + ", "
-    + color2.value
-    + ")";
+const double = []
+const newArray = array.forEach((num) => {
+    double.push(num * 8);
+})
+console.log(double);
 
-    css.textContent = body.style.background + ";";
-}
-
-function generateGradient1() {
-    var randomColorCode1 = Math.floor(Math.random()*16777215).toString(16);
-    var randomColor1 = "#"+randomColorCode1;
-    color1.value = randomColor1;
-}
-
-function generateGradient2() {
-    var randomColorCode2 = Math.floor(Math.random()*16777215).toString(16);
-    var randomColor2 = "#"+randomColorCode2;
-    color2.value = randomColor2;
-}
-
-function setRandomGradient() {
-    generateGradient1()
-    generateGradient2()
-    setGradient()
-};
-
-color1.addEventListener("input", setGradient)
-
-color2.addEventListener("input", setGradient)
-
-button.addEventListener("click", setRandomGradient);
-button.addEventListener("onmouseover", function() {
-    button.style.opacity="1";
+const mapArray = array.map((item) => {
+    return item + "cunt"
 })
 
-
+console.log(mapArray)
